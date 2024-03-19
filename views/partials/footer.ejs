@@ -1,0 +1,24 @@
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+    <div class="copyright text-center my-auto">
+      <span>Copyright &copy; <span id="currentDate"></span> Your Website</span>
+    </div>
+  </div>
+</footer>
+<!-- End of Footer -->
+<script>
+  // Mendapatkan elemen span dengan id "currentDate"
+  let dateSpan = document.getElementById("currentDate");
+
+  // Mendapatkan tanggal saat ini
+  let currentDate = new Date();
+
+  // Mengambil tanggal, bulan, dan tahun
+  let day = currentDate.getDate();
+  let month = currentDate.toLocaleString("default", { month: "long" }); // Nama bulan penuh
+  let year = currentDate.getFullYear();
+
+  // Menetapkan tanggal lengkap ke dalam elemen span
+  dateSpan.textContent = `${month} ${day} ${year}`;
+</script>
